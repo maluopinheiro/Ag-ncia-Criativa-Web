@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Criativa Web</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="layout.css">
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">Agência<span>Iget</span></div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">Agência<span class="logo--alt">Iget</span></div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+                    <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                    <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,69 +26,85 @@
 
     <main>
         <section id="home" class="banner">
-            <div class="banner-content">
-                <h1>Transformamos ideias em realidade.</h1>
-                <p>Estratégia, Design e Tecnologia para o seu negócio decolar.</p>
-                <a href="#servicos" class="btn">Conheça nossos serviços</a>
+            <div class="container banner__content">
+                <h1 class="banner__title">Transformamos ideias em realidade.</h1>
+                <p class="banner__subtitle">Estratégia, Design e Tecnologia para o seu negócio decolar.</p>
+                <a href="#servicos" class="btn btn--primary">Conheça nossos serviços</a>
             </div>
         </section>
 
-        <section id="sobre" class="container">
-            <h2>Sobre Nós</h2>
-            <div class="sobre-grid">
-                <p>Sempre focando em resultados. Temos total transperência com nossos clientes, 100% preparados para fazer seu projeto virar realidade.</p>
-            </div>
-        </section>
-
-        <section id="servicos" class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="servicos-grid">
-                <div class="card">
-                    <h3>Design Gráfico</h3>
-                    <p>Identidades visuais marcantes e modernas.</p>
-                </div>
-                <div class="card">
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Sites rápidos, seguros e otimizados para o Google.</p>
-                </div>
-                <div class="card">
-                    <h3>Branding</h3>
-                    <p>Posicionamento de marca para conquistar o mercado.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="depoimentos" class="bg-light">
+        <section id="sobre" class="section">
             <div class="container">
-                <h2>O que dizem nossos clientes</h2>
-                <div class="depoimentos-flex">
-                    <blockquote>"A Iget mudou nossa presença digital. O suporte é incrível!" - <strong>João Silva</strong></blockquote>
-                    <blockquote>"Profissionais extremamente competentes e criativos." - <strong>Maria Prado</strong></blockquote>
+                <h2 class="section__title">Sobre nós</h2>
+                <div class="about">
+                    <p class="about__text">
+                        Como uma empresa dedicada e focada em resultados, estamos 100% preparados para transformar seu projeto em realidade. 
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="container">
-            <h2>Contato</h2>
-            <div class="contato-flex">
-                <div class="info-contato">
-                    <p>🗺 Av. Digital, 1000 - Centro</p>
-                    <p>🖁 (86) 9999-9999</p>
-                    <p>📬︎ contato@iget.com</p>
+        <section id="servicos" class="section section--highlight">
+            <div class="container">
+                <h2 class="section__title">Nossos serviços</h2>
+                <div class="services__grid">
+                    <article class="card">
+                        <h3 class="card__title">Design Gráfico</h3>
+                        <p class="card__text">Uma identidade visuai marcante e moderna para sua marca.</p>
+                    </article>
+                    <article class="card">
+                        <h3 class="class__title">Desenvolvimento Web</h3>
+                        <p class="card__text">Sites responsivos, rápidos e otimizados para uma melhor experiência.</p>
+                    </article>
+                    <article class="card">
+                        <h3 class="card__title">Branding</h3>
+                        <p class="card__text">Posicionamento estratégico para conquistar seu espaço no mercado.</p>
+                    </article>
                 </div>
-                <form class="contato-form">
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="email" placeholder="Seu E-mail" required>
-                    <textarea placeholder="Sua Mensagem" rows="5"></textarea>
-                    <button type="submit" class="btn">Enviar Mensagem</button>
-                </form>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="section">
+            <div class="container">
+                <h2 class="section__title">Depoimentos</h2>
+                <div class="cliente">
+                    <blockquote class="cliente__item">
+                        <p class="cliente__text">A Iget mudou nossa presença digital. O suporte é <strong>incrível</strong>.</p>
+                        <cite class="cliente__autor">- João Silva</cite>
+                    </blockquote>
+                    <blockquote class="cliente__item">
+                        <p class="cliente__text">"Profissionais extremamente <strong>preparados</strong> e <strong>criativos</strong>."</p>
+                        <cite class="cliente__autor">- Maria Prado</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <div class="container">
+                <h2 class="section__title">Contato</h2>
+                <div class="contato">
+                    <div class="contato__info">
+                        <p class="contato__item">🗺 Av. Digital, 1000 - Centro</p>
+                        <p class="contato__item">🖁 (86) 9999-9999</p>
+                        <p class="contato__info">📬︎ contato@iget.com</p> 
+                    </div>
+                    <form class="contato-form">
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu E-mail" required>
+                        <textarea placeholder="Sua mensagem" rows="5"></textarea>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Agência Iget. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy">&copy; 2026 Agência Iget. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-</body>
-</html>
+    </body>
+    </html>
