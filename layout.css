@@ -1,0 +1,109 @@
+/* Header e Nav (Flexbox) */
+.header {
+    background: var(--dark);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo--alt {
+    color: var(--primary);
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Banner Hero */
+.banner {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                url('sua-imagem.jpg') center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.banner__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Grid de Serviços (CSS Grid) */
+.services__grid { /* Ajuste o nome aqui se corrigiu no HTML */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    padding: 2rem;
+    background: var(--light);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    background: var(--white);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Seção de Contato (Flexbox) */
+.contato {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.contato__info {
+    flex: 1;
+}
+
+.contato-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contato-form input, .contato-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header__container, .contato {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav__list {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+}
