@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+.section__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section--highlight {
+  background-color: #f1f5f9;
+}
+
+.header {
+  background: #0f172a;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo--alt {
+  color: #2563eb;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.banner {
+  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url("../img/banner.jpg") center/cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.banner__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.banner__subtitle {
+  margin-bottom: 2rem;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.contato {
+  display: flex;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+.contato__info {
+  flex: 1;
+}
+.contato-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contato-form input,
+.contato-form textarea {
+  padding: 1rem;
+  border: 1px solid rgb(156.7112970711, 168.0251046025, 184.2887029289);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .header__container,
+  .contato {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav__list {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #0f172a;
+}
+.btn:hover {
+  background-color: hsla(0, 0%, -10%, 0);
+  transform: translateY(-2px);
+}
+.btn--primary {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background-color: rgb(18.5714285714, 76.1428571429, 202.4285714286);
+  transform: translateY(-2px);
+}
+
+.card {
+  padding: 2rem;
+  background: #f1f5f9;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card__title {
+  margin-bottom: 1rem;
+}
+.card__text {
+  font-size: 0.95rem;
+}
+
+.footer {
+  background: #0f172a;
+  padding: 2rem 0;
+  text-align: center;
+  color: #ffffff;
+}
+.footer__copy {
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=estilos.css.map */

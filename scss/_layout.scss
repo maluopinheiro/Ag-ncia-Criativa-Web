@@ -1,0 +1,104 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+.header {
+  background: $dark;
+  padding: $spacing-md 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  color: $white;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &--alt {
+    color: $primary;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: $spacing-lg;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+}
+
+.banner {
+  background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
+              url('../img/banner.jpg') center/cover;
+  height: 70vh;
+  @include flex-center;
+  text-align: center;
+  color: $white;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: $spacing-md;
+  }
+
+  &__subtitle {
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.services {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    margin-top: $spacing-lg * 1.5; // operador
+  }
+}
+
+.contato {
+  display: flex;
+  gap: $spacing-xl;
+  margin-top: $spacing-lg;
+
+  &__info {
+    flex: 1;
+  }
+
+  &-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    input,
+    textarea {
+      padding: $spacing-md;
+      border: 1px solid lighten($grey, 20%);
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container,
+  .contato {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav__list {
+    margin-top: $spacing-md;
+    gap: $spacing-md;
+  }
+}

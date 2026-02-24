@@ -1,0 +1,28 @@
+@use "sass:color";
+@use 'variaveis' as *;
+
+// Mixin 1 — botão padrão
+@mixin button-base($bg-color, $text-color) {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: $transition;
+  cursor: pointer;
+  border: none;
+  background-color: $bg-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: color.adjust($bg-color, $lightness: -10%);
+    transform: translateY(-2px);
+  }
+}
+
+// Mixin 2 — flex centralizado
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

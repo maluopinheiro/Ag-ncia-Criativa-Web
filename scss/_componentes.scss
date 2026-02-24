@@ -1,0 +1,41 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+.btn {
+  @include button-base(transparent, $dark);
+
+  &--primary {
+    @include button-base($primary, $white);
+  }
+}
+
+.card {
+  padding: $spacing-lg;
+  background: $light;
+  border-radius: 10px;
+  transition: $transition;
+
+  &:hover {
+    background: $white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+  }
+
+  &__text {
+    font-size: 0.95rem;
+  }
+}
+
+.footer {
+  background: $dark;
+  padding: $spacing-lg 0;
+  text-align: center;
+  color: $white;
+
+  &__copy {
+    font-size: 0.9rem;
+  }
+}
